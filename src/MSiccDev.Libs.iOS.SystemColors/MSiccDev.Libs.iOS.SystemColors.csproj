@@ -1,0 +1,63 @@
+<Project Sdk="MSBuild.Sdk.Extras/3.0.38">
+
+    <PropertyGroup>
+	  <ProjectVersion>1.0.21491</ProjectVersion>
+	  <PrereleaseSuffix>-pre</PrereleaseSuffix>
+	<RevisionSeparator>.</RevisionSeparator>
+	<Revision>1</Revision>
+	<ReleaseVersion>$(ProjectVersion)$(RevisionSeparator)$(Revision)</ReleaseVersion>
+	<PreReleaseVersion>$(ProjectVersion)$(PrereleaseSuffix)$(RevisionSeparator)$(Revision)</PreReleaseVersion>
+  </PropertyGroup>
+
+   <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;Xamarin.iOS10;</TargetFrameworks>
+
+	<Product>$(AssemblyName) ($(TargetFramework))</Product>
+	<AssemblyVersion>$(ReleaseVersion)</AssemblyVersion>
+	<AssemblyFileVersion>$(ReleaseVersion)</AssemblyFileVersion>
+	<NeutralLanguage>en</NeutralLanguage>
+	<LangVersion>latest</LangVersion>
+	<DefineConstants>$(DefineConstants);</DefineConstants>
+
+	<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+	<GenerateLibraryLayout>true</GenerateLibraryLayout>
+	<IncludeContentInPack>true</IncludeContentInPack>
+
+
+    <!--<PackageProjectUrl>https://github.com/MSiccDev/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MSiccDev/</RepositoryUrl>-->
+	<PackageReleaseNotes>Library that provides the iOS system colors to Xamarin.Forms</PackageReleaseNotes>
+	<PackageTags>xamarin, ios, xamarin.forms, plugin, system colors, colors, system</PackageTags>
+
+	<Title>MSiccDev.Libs.iOS.SystemColors</Title>
+	<Summary>Library that provides iOS System Colors in Xamarin.Forms</Summary>
+	<Description>Library that provides iOS System Colors in Xamarin.Forms</Description>
+
+	<Owners>MSiccDev Software Development</Owners>
+	<Authors>Marco Siccardi</Authors>
+	<Copyright>Copyright MSiccDev 2021</Copyright>
+
+  </PropertyGroup>
+
+
+  <ItemGroup>
+	<PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
+	<PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+
+	<Compile Include="**\*.shared.cs" />
+  </ItemGroup>
+
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+	<Compile Include="SystemColorsIosResourceDictionary.xaml.cs">
+	  <DependentUpon>SystemColorsIosResourceDictionary.xaml</DependentUpon>
+	  <SubType></SubType>
+	</Compile>
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+	<Compile Include="**\*.ios.cs" />
+  </ItemGroup>
+
+
+</Project>
