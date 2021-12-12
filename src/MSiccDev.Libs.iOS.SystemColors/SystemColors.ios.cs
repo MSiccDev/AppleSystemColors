@@ -9,8 +9,6 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: Dependency(typeof(SystemColors))]
 namespace MSiccDev.Libs.iOS.SystemColors
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Code Notifications", "XI0002:Notifies you from using newer Apple APIs when targeting an older OS version", Justification = "<Pending>")]
-
     //https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
     //https://developer.apple.com/documentation/uikit/uicolor/ui_element_colors
 

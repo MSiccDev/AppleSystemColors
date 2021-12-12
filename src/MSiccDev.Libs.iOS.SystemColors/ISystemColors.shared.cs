@@ -44,6 +44,5 @@ namespace MSiccDev.Libs.iOS.SystemColors
         Color TertiarySystemGroupedBackgroundColor { get; }
         Color DarkTextColor { get; }
         Color LightTextColor { get; }
-
     }
 }

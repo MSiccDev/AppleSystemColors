@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 src/MSiccDev.Libs.iOS.SystemColors/.DS_Store
 src/.DS_Store
+src/nuget.config
