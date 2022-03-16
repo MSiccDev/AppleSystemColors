@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="MSBuild.Sdk.Extras/3.0.38">
 	<PropertyGroup>
-		<ProjectVersion>1.0.22111</ProjectVersion>
+		<ProjectVersion>1.0.22112</ProjectVersion>
 		<PrereleaseSuffix>-pre</PrereleaseSuffix>
 		<RevisionSeparator>.</RevisionSeparator>
 		<Revision>1</Revision>
@@ -19,17 +19,17 @@
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 		<GenerateLibraryLayout>true</GenerateLibraryLayout>
 		<IncludeContentInPack>true</IncludeContentInPack>
-		<PackageLicenseUrl>https://github.com/MSiccDev/SystemColorsiOS/blob/main/LICENSE</PackageLicenseUrl>
-		<PackageProjectUrl>https://github.com/MSiccDev/SystemColorsiOS</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/MSiccDev/SystemColorsiOS</RepositoryUrl>
+		<PackageLicenseUrl>https://github.com/MSiccDev/AppleSystemColors/blob/main/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/MSiccDev/AppleSystemColors</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/MSiccDev/AppleSystemColors</RepositoryUrl>
 		<PackageReleaseNotes>Library that provides the iOS system colors to Xamarin.Forms</PackageReleaseNotes>
 		<PackageTags>xamarin, ios, xamarin.forms, plugin, system colors, colors, system</PackageTags>
-		<Title>MSiccDev.Libs.iOS.SystemColors</Title>
-		<Summary>Library that provides iOS System Colors in Xamarin.Forms</Summary>
-		<Description>Library that provides iOS System Colors in Xamarin.Forms</Description>
+		<Title>MSiccDev.Libs.AppleSystemColors</Title>
+		<Summary>Library that provides iOS and MacOS System Colors in Xamarin.Forms</Summary>
+		<Description>Library that provides iOS and MacOS System Colors in Xamarin.Forms</Description>
 		<Owners>MSiccDev Software Development</Owners>
 		<Authors>Marco Siccardi</Authors>
-		<Copyright>© 2021 MSiccDev Software Development</Copyright>
+		<Copyright>© 2022 MSiccDev Software Development</Copyright>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DefineConstants>DEBUG</DefineConstants>
@@ -89,8 +89,8 @@
 		</Compile>
 		<Compile Include="**\*.shared.cs" />
 		<Compile Include="SystemColorsMacOSResourceDictionary.xaml.cs">
-		  <DependentUpon>SystemColorsMacOSResourceDictionary.xaml</DependentUpon>
-		  <SubType></SubType>
+			<DependentUpon>SystemColorsMacOSResourceDictionary.xaml</DependentUpon>
+			<SubType>Code</SubType>
 		</Compile>
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
