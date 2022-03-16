@@ -2,9 +2,9 @@
 
 using Xamarin.Forms;
 
-namespace MSiccDev.Libs.iOS.SystemColors
+namespace MSiccDev.Libs.AppleSystemColors
 {
-    public interface ISystemColors
+    public interface ISystemColorsiOS
     {
         Color SystemRed { get; }
         Color SystemOrange { get; }

@@ -1,18 +1,18 @@
 ﻿
-using MSiccDev.Libs.iOS.SystemColors;
+using MSiccDev.Libs.AppleSystemColors;
 
 using UIKit;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: Dependency(typeof(SystemColors))]
-namespace MSiccDev.Libs.iOS.SystemColors
+[assembly: Dependency(typeof(SystemColorsiOS))]
+namespace MSiccDev.Libs.AppleSystemColors
 {
     //https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
     //https://developer.apple.com/documentation/uikit/uicolor/ui_element_colors
 
-    public class SystemColors : ISystemColors
+    public class SystemColorsiOS : ISystemColorsiOS
     {
         #region System Colors
         public Color SystemRed => UIColor.SystemRedColor.ToColor();
@@ -44,8 +44,8 @@ namespace MSiccDev.Libs.iOS.SystemColors
         public Color QuaternaryLabel => UIColor.QuaternaryLabelColor.ToColor();
         public Color Placeholder => UIColor.PlaceholderTextColor.ToColor();
         public Color Separator => UIColor.SeparatorColor.ToColor();
-        public Color OpaqueSeparator => UIColor.SeparatorColor.ToColor();
-        public Color LinkColor => UIColor.SeparatorColor.ToColor();
+        public Color OpaqueSeparator => UIColor.OpaqueSeparatorColor.ToColor();
+        public Color LinkColor => UIColor.LinkColor.ToColor();
 
         public Color FillColor => UIColor.SystemFillColor.ToColor();
         public Color SecondaryFillColor => UIColor.SecondarySystemFillColor.ToColor();
