@@ -17,56 +17,60 @@ namespace MSiccDev.Libs.AppleSystemColors
     public class SystemColorsMacOS : ISystemColorsMacOS
     {
         #region System Colors
-        public Color SystemRed => NSColor.SystemRedColor.ToColor();
-        public Color SystemOrange => NSColor.SystemOrangeColor.ToColor();
-        public Color SystemYellow => NSColor.SystemYellowColor.ToColor();
-        public Color SystemGreen => NSColor.SystemGreenColor.ToColor();
-        public Color SystemMint => NSColor.SystemMintColor.ToColor();
-        public Color SystemTeal => NSColor.SystemTealColor.ToColor();
-        public Color SystemCyan => NSColor.SystemCyanColor.ToColor();
-        public Color SystemBlue => NSColor.SystemBlueColor.ToColor();
-        public Color SystemIndigo => NSColor.SystemIndigoColor.ToColor();
-        public Color SystemPurple => NSColor.SystemPurpleColor.ToColor();
-        public Color SystemPink => NSColor.SystemPinkColor.ToColor();
-        public Color SystemBrown => NSColor.SystemBrownColor.ToColor();
-        public Color SystemGray => NSColor.SystemGrayColor.ToColor();
+        public Color SystemRed => NSColor.SystemRedColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemOrange => NSColor.SystemOrangeColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemYellow => NSColor.SystemYellowColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemGreen => NSColor.SystemGreenColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemMint => NSColor.SystemMintColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemTeal => NSColor.SystemTealColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemCyan => NSColor.SystemCyanColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemBlue => NSColor.SystemBlueColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemIndigo => NSColor.SystemIndigoColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemPurple => NSColor.SystemPurpleColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemPink => NSColor.SystemPinkColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemBrown => NSColor.SystemBrownColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SystemGray => NSColor.SystemGrayColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
         #endregion
 
         #region UI Element Colors
-        public Color SystemLabel => NSColor.LabelColor.ToColor();
-        public Color SecondaryLabel => NSColor.SecondaryLabelColor.ToColor();
-        public Color TertiaryLabel => NSColor.TertiaryLabelColor.ToColor();
-        public Color QuaternaryLabel => NSColor.QuaternaryLabelColor.ToColor();
-        public Color Placeholder => NSColor.PlaceholderTextColor.ToColor();
-        public Color Separator => NSColor.SeparatorColor.ToColor();
-        public Color LinkColor => NSColor.LinkColor.ToColor();
+        public Color SystemLabel => NSColor.LabelColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SecondaryLabel => NSColor.SecondaryLabelColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color TertiaryLabel => NSColor.TertiaryLabelColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color QuaternaryLabel => NSColor.QuaternaryLabelColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color Placeholder => NSColor.PlaceholderTextColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color Separator => NSColor.SeparatorColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color LinkColor => NSColor.LinkColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
 
-        public Color AlternateSelectedControlTextcColor => NSColor.AlternateSelectedControlText.ToColor();
-        public List<Color> AlternatingContentBackgroundColors => NSColor.AlternatingContentBackgroundColors.Select(color => color.ToColor()).ToList();
-        public Color ControlAccent => NSColor.ControlAccentColor.ToColor();
-        public Color ControlBackgroundColor => NSColor.ControlBackground.ToColor();
-        public Color ControlColor => NSColor.Control.ToColor();
-        public Color ControlTextColor => NSColor.ControlText.ToColor();
-        public Color DisabledControlTextColor => NSColor.DisabledControlText.ToColor();
-        public Color FindHighlightColor => NSColor.FindHighlightColor.ToColor();
-        public Color GridColor => NSColor.Grid.ToColor();
-        public Color HeaderTextColor => NSColor.Grid.ToColor();
-        public Color KeyboardFocusIndicatorColor => NSColor.KeyboardFocusIndicator.ToColor();
-        public Color ScrubberTexturedBackgroundColor => NSColor.ScrubberTexturedBackgroundColor.ToColor();
-        public Color SelectedControlColor => NSColor.SelectedControl.ToColor();
-        public Color SelectedControlTextcolor => NSColor.SelectedControlText.ToColor();
-        public Color SelectedMenuItemColor => NSColor.SelectedMenuItem.ToColor();
-        public Color SelectedMenuItemTextColor => NSColor.SelectedMenuItemText.ToColor();
-        public Color SelectedTextBackgroundColor => NSColor.SelectedTextBackground.ToColor();
-        public Color SelectedTextColor => NSColor.SelectedText.ToColor();
-        public Color ShadowColor => NSColor.Shadow.ToColor();
-        public Color TextBackgroundColor => NSColor.TextBackground.ToColor();
-        public Color TextColor => NSColor.Text.ToColor();
-        public Color UnderPageBackgroundColor => NSColor.UnderPageBackgroundColor.ToColor();
-        public Color UnemphasizedSelectedContentBackgroundColor => NSColor.UnemphasizedSelectedContentBackgroundColor.ToColor();
-        public Color UnemphasizedSelectedTextContentBackgroundColor => NSColor.UnemphasizedSelectedTextBackgroundColor.ToColor();
-        public Color WindowBackgroundColor => NSColor.WindowBackground.ToColor();
-        public Color WindowFrameColor => NSColor.WindowFrame.ToColor();
+        public Color AlternateSelectedControlTextcColor => NSColor.AlternateSelectedControlText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public List<Color> AlternatingContentBackgroundColors => NSColor.AlternatingContentBackgroundColors.Select(color => color.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace)).ToList();
+        public Color ControlAccent => NSColor.ControlAccentColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color ControlBackgroundColor => NSColor.ControlBackground.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color ControlColor => NSColor.Control.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color ControlTextColor => NSColor.ControlText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color DisabledControlTextColor => NSColor.DisabledControlText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color FindHighlightColor => NSColor.FindHighlightColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color GridColor => NSColor.Grid.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color HeaderTextColor => NSColor.Grid.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color KeyboardFocusIndicatorColor => NSColor.KeyboardFocusIndicator.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+
+        //public Color ScrubberTexturedBackgroundColor => NSColor.ScrubberTexturedBackgroundColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+
+        public Color SelectedControlColor => NSColor.SelectedControl.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SelectedControlTextcolor => NSColor.SelectedControlText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SelectedMenuItemColor => NSColor.SelectedMenuItem.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SelectedMenuItemTextColor => NSColor.SelectedMenuItemText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SelectedTextBackgroundColor => NSColor.SelectedTextBackground.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color SelectedTextColor => NSColor.SelectedText.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color ShadowColor => NSColor.Shadow.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color TextBackgroundColor => NSColor.TextBackground.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color TextColor => NSColor.Text.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color UnderPageBackgroundColor => NSColor.UnderPageBackgroundColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color UnemphasizedSelectedContentBackgroundColor => NSColor.UnemphasizedSelectedContentBackgroundColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color UnemphasizedSelectedTextContentBackgroundColor => NSColor.UnemphasizedSelectedTextBackgroundColor.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color WindowBackgroundColor => NSColor.WindowBackground.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+        public Color WindowFrameColor => NSColor.WindowFrame.ToColor(this.UseP3ColorSpace ? NSColorSpace.DisplayP3ColorSpace : NSColorSpace.SRGBColorSpace);
+
+        public bool UseP3ColorSpace { get; set; } = true;
         #endregion
     }
 }

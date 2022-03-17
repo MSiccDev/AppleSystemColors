@@ -6,6 +6,8 @@ namespace MSiccDev.Libs.AppleSystemColors
 {
     public interface ISystemColorsMacOS
     {
+        bool UseP3ColorSpace { get; set; }
+
         Color SystemRed { get; }
         Color SystemOrange { get; }
         Color SystemYellow { get; }
@@ -37,7 +39,7 @@ namespace MSiccDev.Libs.AppleSystemColors
         Color GridColor { get; }
         Color HeaderTextColor { get; }
         Color KeyboardFocusIndicatorColor { get; }
-        Color ScrubberTexturedBackgroundColor { get; }
+        //Color ScrubberTexturedBackgroundColor { get; }
         Color SelectedControlColor { get; }
         Color SelectedControlTextcolor { get; }
         Color SelectedMenuItemColor { get; }

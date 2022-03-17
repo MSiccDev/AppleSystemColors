@@ -44,7 +44,7 @@ namespace MSiccDev.Libs.AppleSystemColors
             this.Add(nameof(ISystemColorsMacOS.GridColor), DependencyService.Get<ISystemColorsMacOS>().GridColor);
             this.Add(nameof(ISystemColorsMacOS.HeaderTextColor), DependencyService.Get<ISystemColorsMacOS>().HeaderTextColor);
             this.Add(nameof(ISystemColorsMacOS.KeyboardFocusIndicatorColor), DependencyService.Get<ISystemColorsMacOS>().KeyboardFocusIndicatorColor);
-            this.Add(nameof(ISystemColorsMacOS.ScrubberTexturedBackgroundColor), DependencyService.Get<ISystemColorsMacOS>().ScrubberTexturedBackgroundColor);
+            //this.Add(nameof(ISystemColorsMacOS.ScrubberTexturedBackgroundColor), DependencyService.Get<ISystemColorsMacOS>().ScrubberTexturedBackgroundColor);
             this.Add(nameof(ISystemColorsMacOS.SelectedControlColor), DependencyService.Get<ISystemColorsMacOS>().SelectedControlColor);
             this.Add(nameof(ISystemColorsMacOS.SelectedControlTextcolor), DependencyService.Get<ISystemColorsMacOS>().SelectedControlTextcolor);
             this.Add(nameof(ISystemColorsMacOS.SelectedMenuItemColor), DependencyService.Get<ISystemColorsMacOS>().SelectedMenuItemColor);
